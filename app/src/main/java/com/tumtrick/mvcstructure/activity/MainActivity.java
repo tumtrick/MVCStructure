@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         int screenHegiht = ScreenUtils.getInstance().getScreenHeight();
 
        // Toast.makeText(getApplicationContext() , "Width : " + screenWidth + " , Height : " + screenHegiht  , Toast.LENGTH_SHORT).show();
-        //TUM
+        //TUM 123
 
         if (savedInstanceState == null ) {
             // First Created
