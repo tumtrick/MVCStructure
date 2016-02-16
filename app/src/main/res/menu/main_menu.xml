@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_secondfragment"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        android:title="To Second Fragment"/>
+
+    <item
+        android:id="@+id/action_frist_tab"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        android:title="Frist Tab"/>
+
+    <item
+        android:id="@+id/action_second_tab"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        android:title="Second Tab"/>
+</menu>
