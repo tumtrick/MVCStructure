@@ -107,16 +107,17 @@ public class MainActivity extends AppCompatActivity {
                         .findFragmentById(R.id.contentContainer);
 
 
-                getSupportFragmentManager().beginTransaction()
-                        // .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)   Standard
-                        .setCustomAnimations(
-                                R.anim.from_right, R.anim.to_left ,
-                                R.anim.from_left , R.anim.to_right
-                        )
-                        .replace(R.id.contentContainer, SecondFragment.newInstance())
-                        .addToBackStack(null)
-                        .commit();
-            
+                if (fragment instanceof SecondFragment == false) {  // Check replace fragment
+                    getSupportFragmentManager().beginTransaction()
+                           // .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)   Standard
+                            .setCustomAnimations(
+                                    R.anim.from_right, R.anim.to_left ,
+                                    R.anim.from_left , R.anim.to_right
+                            )
+                            .replace(R.id.contentContainer, SecondFragment.newInstance())
+                            .addToBackStack(null)
+                            .commit();
+                }
 
 
 
