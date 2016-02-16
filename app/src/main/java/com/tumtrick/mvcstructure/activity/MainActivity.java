@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         int screenHegiht = ScreenUtils.getInstance().getScreenHeight();
 
        // Toast.makeText(getApplicationContext() , "Width : " + screenWidth + " , Height : " + screenHegiht  , Toast.LENGTH_SHORT).show();
-        //TUM
+
 
         if (savedInstanceState == null ) {
             // First Created
@@ -140,7 +140,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
 
-        //TUM 1
         someVarA = savedInstanceState.getString("someVarA");
 
 
