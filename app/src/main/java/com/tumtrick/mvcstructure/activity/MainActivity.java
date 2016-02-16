@@ -1,10 +1,8 @@
 package com.tumtrick.mvcstructure.activity;
 
-import android.os.Parcelable;
-import android.os.PersistableBundle;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -28,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         int screenHegiht = ScreenUtils.getInstance().getScreenHeight();
 
        // Toast.makeText(getApplicationContext() , "Width : " + screenWidth + " , Height : " + screenHegiht  , Toast.LENGTH_SHORT).show();
-
+        //TUM
 
         if (savedInstanceState == null ) {
             // First Created
@@ -109,17 +107,18 @@ public class MainActivity extends AppCompatActivity {
                         .findFragmentById(R.id.contentContainer);
 
 
-                if (fragment instanceof SecondFragment == false) {  // Check replace fragment
-                    getSupportFragmentManager().beginTransaction()
-                           // .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)   Standard
-                            .setCustomAnimations(
-                                    R.anim.from_right, R.anim.to_left ,
-                                    R.anim.from_left , R.anim.to_right
-                            )
-                            .replace(R.id.contentContainer, SecondFragment.newInstance())
-                            .addToBackStack(null)
-                            .commit();
-                }
+                getSupportFragmentManager().beginTransaction()
+                        // .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)   Standard
+                        .setCustomAnimations(
+                                R.anim.from_right, R.anim.to_left ,
+                                R.anim.from_left , R.anim.to_right
+                        )
+                        .replace(R.id.contentContainer, SecondFragment.newInstance())
+                        .addToBackStack(null)
+                        .commit();
+              /*  if (fragment instanceof SecondFragment == false) {  // Check replace fragment
+
+                } */
 
 
 
@@ -142,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
 
+        //TUM
         someVarA = savedInstanceState.getString("someVarA");
 
 
