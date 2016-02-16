@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
 
-        //TUM
+        //TUM 1
         someVarA = savedInstanceState.getString("someVarA");
 
 
