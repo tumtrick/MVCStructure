@@ -116,9 +116,7 @@ public class MainActivity extends AppCompatActivity {
                         .replace(R.id.contentContainer, SecondFragment.newInstance())
                         .addToBackStack(null)
                         .commit();
-              /*  if (fragment instanceof SecondFragment == false) {  // Check replace fragment
-
-                } */
+            
 
 
 
